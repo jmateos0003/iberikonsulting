@@ -924,6 +924,89 @@
   .reveal.visible {
     opacity: 1; transform: translateY(0);
   }
+  /* ─── VISUAL DEPTH FIX · IBERIKONSULTING ─── */
+
+:root {
+  --card-bg: #FBF8F5;
+  --card-border: rgba(197, 186, 141, 0.55);
+  --card-shadow: 0 18px 45px rgba(17, 17, 17, 0.055);
+  --card-shadow-hover: 0 24px 60px rgba(17, 17, 17, 0.09);
+}
+
+/* Secciones claras: más contraste entre bloques */
+#servicios,
+#tarifas,
+#contacto {
+  background:
+    linear-gradient(180deg, #F7F3F0 0%, #F2EDE8 100%);
+}
+
+/* Cards generales */
+.problem-card,
+.service-card,
+.sector-card,
+.pricing-card,
+.testimonial-card,
+.contact-form {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+/* Problemas: ahora se leen como bloques */
+.problem-card {
+  border-left: 4px solid var(--sand);
+  padding: 1.5rem 1.7rem;
+}
+
+/* Servicios: más presencia sin romper estilo */
+.service-card {
+  border-top: 1px solid var(--sand);
+}
+
+.service-card:hover,
+.problem-card:hover,
+.sector-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Sectores: antes se fundían con el fondo */
+.sector-card {
+  background: rgba(251, 248, 245, 0.92);
+  border-color: rgba(197, 186, 141, 0.45);
+}
+
+/* Pricing: separar mucho mejor las 3 columnas */
+.pricing-card {
+  background: #FBF8F5;
+  border-color: rgba(197, 186, 141, 0.65);
+}
+
+.pricing-card.featured {
+  box-shadow: 0 28px 70px rgba(17, 17, 17, 0.22);
+  border: 1px solid rgba(174, 204, 196, 0.55);
+}
+
+/* Contacto: formulario más caja real */
+.contact-form {
+  background: #FBF8F5;
+  border-left: 4px solid var(--accent);
+}
+
+/* Detalles de contacto: más orden visual */
+.contact-detail {
+  background: rgba(251, 248, 245, 0.6);
+  border: 1px solid rgba(197, 186, 141, 0.28);
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-detail:first-of-type {
+  border-top: 1px solid rgba(197, 186, 141, 0.28);
+}
 </style>
 </head>
 <body>
