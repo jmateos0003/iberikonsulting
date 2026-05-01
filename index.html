@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,15 +17,15 @@
     font-display: swap;
   }
     :root {
-    --white: #FFFFFF;
-    --sand-light: #EBE7E4;
-    --sand: #D0C4AC;
-    --stone: #645F5B;
-    --forest: #263532;
-    --accent: #B8860B;
-    --accent-light: #D4A520;
-    --cta: #C8401A;
-    --cta-hover: #A83010;
+    --white: #F7F3F0;
+    --sand-light: #F7F3F0;
+    --sand: #C5BA8D;
+    --stone: #6B7D7A;
+    --forest: #111111;
+    --accent: #AECCC4;
+    --accent-light: #C5BA8D;
+    --cta: #AECCC4;
+    --cta-hover: #8FAEA7;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,7 +74,7 @@
   .nav-links a:hover { opacity: 1; }
 
   .nav-cta {
-    background: var(--cta); color: var(--white) !important;
+    background: var(--cta); color: #111111 !important;
     padding: 0.55rem 1.3rem; border-radius: 3px;
     font-weight: 600 !important; opacity: 1 !important;
     transition: background 0.2s !important;
@@ -171,7 +172,7 @@
   }
 
   .btn-primary {
-    background: var(--cta); color: var(--white);
+    background: var(--cta); color: #111111;
     padding: 1rem 2.2rem; border-radius: 3px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem; font-weight: 600;
@@ -335,7 +336,7 @@
 
   .service-link {
     display: inline-flex; align-items: center; gap: 6px;
-    color: var(--cta); font-size: 0.82rem; font-weight: 600;
+    color: var(--accent); font-size: 0.82rem; font-weight: 600;
     text-decoration: none; margin-top: 1.2rem;
     letter-spacing: 0.04em; text-transform: uppercase;
     transition: gap 0.2s;
@@ -436,7 +437,7 @@
 
   .why-icon {
     width: 40px; height: 40px; flex-shrink: 0;
-    background: var(--forest); border-radius: 50%;
+    background: var(--accent); border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 1rem;
     margin-top: 2px;
@@ -536,7 +537,7 @@
   .ayuda-item:hover { border-color: rgba(208,196,172,0.35); }
 
   .ayuda-badge {
-    background: var(--accent); color: var(--white);
+    background: var(--forest); color: var(--sand-light);
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
     padding: 3px 8px; border-radius: 2px; white-space: nowrap;
     flex-shrink: 0; margin-top: 2px;
@@ -577,7 +578,7 @@
 
   .pricing-tag {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--cta); color: var(--white);
+    background: var(--accent); color: #111111;
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
     padding: 4px 14px; border-radius: 2px; white-space: nowrap;
   }
@@ -622,7 +623,7 @@
   .btn-cta-full {
     display: block; text-align: center;
     padding: 0.85rem; border-radius: 3px;
-    background: var(--cta); color: var(--white);
+    background: var(--cta); color: #111111;
     font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
     text-decoration: none; transition: background 0.2s;
   }
@@ -694,14 +695,14 @@
 
   /* ─── CTA BAND ─── */
   #cta-band {
-    background: var(--cta);
+    background: var(--forest);
     padding: 80px 5%;
     text-align: center;
   }
 
   #cta-band h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
-    color: var(--white); margin-bottom: 1rem;
+    color: var(--sand-light); margin-bottom: 1rem;
     text-transform: uppercase; letter-spacing: 0.02em;
   }
   #cta-band p {
@@ -712,7 +713,7 @@
   .cta-band-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
   .btn-white {
-    background: var(--white); color: var(--cta);
+    background: var(--sand-light); color: var(--forest);
     padding: 1rem 2.2rem; border-radius: 3px;
     font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700;
     text-decoration: none; transition: all 0.2s;
@@ -796,7 +797,7 @@
 
   .form-submit {
     width: 100%; padding: 1rem;
-    background: var(--cta); color: var(--white);
+    background: var(--cta); color: #111111;
     border: none; border-radius: 3px; cursor: pointer;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem; font-weight: 700;
@@ -1447,7 +1448,7 @@
   <p>Empieza con un diagnóstico gratuito de 45 minutos. Sin compromiso. Te decimos exactamente qué está fallando y qué oportunidades estás dejando pasar.</p>
   <div class="cta-band-actions">
     <a href="#contacto" class="btn-white">Solicitar diagnóstico gratuito →</a>
-    <a href="https://wa.me/34600000000" class="btn-ghost-white" target="_blank">💬 WhatsApp directo</a>
+    <a href="https://wa.me/34696813535" class="btn-ghost-white" target="_blank">💬 WhatsApp directo</a>
   </div>
 </section>
 
@@ -1473,14 +1474,14 @@
         <div class="contact-icon">✉️</div>
         <div class="contact-text">
           <label>Email</label>
-          <a href="mailto:hola@iberikonsulting.com">hola@iberikonsulting.com</a>
+          <a href="mailto:info@iberikonsulting.com">info@iberikonsulting.com</a>
         </div>
       </div>
       <div class="contact-detail">
         <div class="contact-icon">📞</div>
         <div class="contact-text">
           <label>Teléfono / WhatsApp</label>
-          <a href="tel:+34600000000">+34 600 000 000</a>
+          <a href="tel:+34696813535">696 81 35 35</a>
         </div>
       </div>
       <div class="contact-detail">
@@ -1514,7 +1515,7 @@
       </div>
       <div class="form-group">
         <label>Teléfono</label>
-        <input type="tel" placeholder="+34 600 000 000">
+        <input type="tel" placeholder="696 81 35 35">
       </div>
       <div class="form-group">
         <label>¿Qué necesitas?</label>
@@ -1574,10 +1575,10 @@
     <div class="footer-col">
       <h5>Contacto</h5>
       <ul>
-        <li><a href="mailto:hola@iberikonsulting.com">hola@iberikonsulting.com</a></li>
-        <li><a href="tel:+34600000000">+34 600 000 000</a></li>
+        <li><a href="mailto:info@iberikonsulting.com">info@iberikonsulting.com</a></li>
+        <li><a href="tel:+34696813535">696 81 35 35</a></li>
         <li><a href="#">Bilbao, Bizkaia</a></li>
-        <li style="margin-top:0.8rem;"><a href="https://wa.me/34600000000" style="color:#4ade80;">💬 WhatsApp</a></li>
+        <li style="margin-top:0.8rem;"><a href="https://wa.me/34696813535" style="color:#4ade80;">💬 WhatsApp</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Instagram</a></li>
       </ul>
@@ -1594,7 +1595,7 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank" title="WhatsApp">
+<a href="https://wa.me/34696813535" class="whatsapp-float" target="_blank" title="WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
