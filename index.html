@@ -1011,29 +1011,32 @@
   
   /* ─── PRICING LAYOUT IMPROVEMENT ─── */
 
+/* ─── PRICING LAYOUT IMPROVEMENT ─── */
+
 .pricing-grid {
   align-items: center;
 }
 
-/* Desktop: la caja central manda */
 .pricing-card {
-  transform: scale(0.92);
-  opacity: 0.92;
+  width: 100%;
+  min-height: 620px;
+  transform: scale(0.94);
+  opacity: 0.94;
 }
 
 .pricing-card.featured {
-  transform: scale(1.04);
+  min-height: 680px;
+  transform: scale(1.03);
   opacity: 1;
   z-index: 2;
 }
 
-/* Evita que el hover rompa la jerarquía */
 .pricing-card:hover {
-  transform: scale(0.94) translateY(-4px);
+  transform: scale(0.95) translateY(-4px);
 }
 
 .pricing-card.featured:hover {
-  transform: scale(1.06) translateY(-4px);
+  transform: scale(1.04) translateY(-4px);
 }
 
 /* ─── MOBILE CAROUSEL ─── */
@@ -1044,11 +1047,12 @@
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 9%;
-    padding: 1rem 9% 2.8rem;
+    scroll-padding-inline: 4%;
+    padding: 1rem 4% 2.8rem;
     margin-left: -5%;
     margin-right: -5%;
     -webkit-overflow-scrolling: touch;
+    align-items: center;
   }
 
   .pricing-grid::-webkit-scrollbar {
@@ -1056,17 +1060,20 @@
   }
 
   .pricing-card {
-    flex: 0 0 78%;
-    min-width: 78%;
+    flex: 0 0 88%;
+    min-width: 88%;
+    min-height: 620px;
     scroll-snap-align: center;
-    transform: scale(0.94);
-    opacity: 0.9;
+    transform: scale(0.96);
+    opacity: 0.92;
   }
 
   .pricing-card.featured {
+    flex: 0 0 88%;
+    min-width: 88%;
+    min-height: 660px;
     transform: scale(1);
     opacity: 1;
-    z-index: 2;
   }
 
   .pricing-card:hover,
@@ -1074,12 +1081,8 @@
     transform: scale(1);
   }
 
-  #tarifas {
-    position: relative;
-  }
-
   #tarifas::after {
-   
+    content: "← desliza →";
     display: block;
     text-align: center;
     margin-top: -1.5rem;
