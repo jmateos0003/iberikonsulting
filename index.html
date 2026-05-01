@@ -1044,8 +1044,8 @@
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding: 7%;
-    padding: 1rem 7% 2.5rem;
+    scroll-padding-inline: 9%;
+    padding: 1rem 9% 2.8rem;
     margin-left: -5%;
     margin-right: -5%;
     -webkit-overflow-scrolling: touch;
@@ -1056,28 +1056,22 @@
   }
 
   .pricing-card {
-    flex: 0 0 82%;
-    min-width: 82%;
+    flex: 0 0 78%;
+    min-width: 78%;
     scroll-snap-align: center;
-    transform: scale(0.96);
+    transform: scale(0.94);
     opacity: 0.9;
   }
 
   .pricing-card.featured {
-    order: -1;
     transform: scale(1);
     opacity: 1;
+    z-index: 2;
   }
 
   .pricing-card:hover,
   .pricing-card.featured:hover {
     transform: scale(1);
-  }
-
-  /* Indicador visual de carousel */
-  #tarifas .pricing-grid::after {
-    content: "";
-    flex: 0 0 1px;
   }
 
   #tarifas {
@@ -1835,10 +1829,14 @@
       const featured = document.querySelector('.pricing-card.featured');
 
       if (grid && featured) {
-        featured.scrollIntoView({
-          behavior: 'instant',
-          inline: 'center',
-          block: 'nearest'
+        const left =
+          featured.offsetLeft -
+          (grid.offsetWidth / 2) +
+          (featured.offsetWidth / 2);
+
+        grid.scrollTo({
+          left: left,
+          behavior: 'instant'
         });
       }
     }
