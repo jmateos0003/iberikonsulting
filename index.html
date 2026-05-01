@@ -924,6 +924,7 @@
   .reveal.visible {
     opacity: 1; transform: translateY(0);
   }
+  
   /* ─── VISUAL DEPTH FIX · IBERIKONSULTING ─── */
 
 :root {
@@ -1007,8 +1008,97 @@
 .contact-detail:first-of-type {
   border-top: 1px solid rgba(197, 186, 141, 0.28);
 }
+  
+  /* ─── PRICING LAYOUT IMPROVEMENT ─── */
+
+.pricing-grid {
+  align-items: center;
+}
+
+/* Desktop: la caja central manda */
+.pricing-card {
+  transform: scale(0.92);
+  opacity: 0.92;
+}
+
+.pricing-card.featured {
+  transform: scale(1.04);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Evita que el hover rompa la jerarquía */
+.pricing-card:hover {
+  transform: scale(0.94) translateY(-4px);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.06) translateY(-4px);
+}
+
+/* ─── MOBILE CAROUSEL ─── */
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 7%;
+    padding: 1rem 7% 2.5rem;
+    margin-left: -5%;
+    margin-right: -5%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pricing-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pricing-card {
+    flex: 0 0 82%;
+    min-width: 82%;
+    scroll-snap-align: center;
+    transform: scale(0.96);
+    opacity: 0.9;
+  }
+
+  .pricing-card.featured {
+    order: -1;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .pricing-card:hover,
+  .pricing-card.featured:hover {
+    transform: scale(1);
+  }
+
+  /* Indicador visual de carousel */
+  #tarifas .pricing-grid::after {
+    content: "";
+    flex: 0 0 1px;
+  }
+
+  #tarifas {
+    position: relative;
+  }
+
+  #tarifas::after {
+    content: "← desliza →";
+    display: block;
+    text-align: center;
+    margin-top: -1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    opacity: 0.75;
+  }
+}
 </style>
 </head>
+  
 <body>
 
 <!-- NAVIGATION -->
@@ -1737,6 +1827,22 @@
     btn.style.background = '#27ae60';
     btn.disabled = true;
   }
+</script>
+  <script>
+  window.addEventListener('load', function () {
+    if (window.innerWidth <= 768) {
+      const grid = document.querySelector('.pricing-grid');
+      const featured = document.querySelector('.pricing-card.featured');
+
+      if (grid && featured) {
+        featured.scrollIntoView({
+          behavior: 'instant',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
+    }
+  });
 </script>
 </body>
 </html>
